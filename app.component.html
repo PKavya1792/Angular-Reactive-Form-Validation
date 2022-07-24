@@ -1,0 +1,44 @@
+<div>
+  <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
+
+    User Name
+    <input type="text" name="username" formControlName="uname">
+    <div *ngIf="uname && uname?.invalid && uname?.touched"> Invalid Field </div>
+    <div *ngIf="uname && uname?.errors?.['required'] && uname?.touched">Required Field</div>
+    <br>
+    <br/>
+
+    Password
+    <input type ="text" name="password" formControlName="pword">
+    <!-- <div>INAVLID:{{pword?.invalid}},TOUCHED:{{pword?.touched}} </div> -->
+    <div *ngIf="pword && pword?.invalid && pword?.touched"> Invalid Field </div>
+    <div *ngIf="pword && pword?.errors?.['required'] && pword?.touched">Required Field</div>
+    <div *ngIf="pword && pword?.errors?.['minlength'] && pword?.touched">Should contain min 8 characters</div>
+    <div *ngIf="pword && pword?.errors?.['maxlength'] && pword?.touched">Should contain max 15 characters</div>
+    <br>
+    <br/>
+
+    Email-ID
+    <input type="email" name="EmailID" formControlName="eid" placeholder="abc123@xyz.com">
+    <div *ngIf="eid && eid?.invalid && eid?.touched"> Invalid Field </div>
+    <div *ngIf="eid && eid?.errors?.['pattern'] && eid?.touched"> Pattern error </div>
+    <br>
+    <br/>
+
+    DOB
+    <input type ="text" name="dateofbirth" formControlName="dob">
+    <!-- <div>INAVLID:{{pword?.invalid}},TOUCHED:{{pword?.touched}} </div> -->
+    <div *ngIf="dob && dob?.invalid && dob?.touched"> Invalid Field </div>
+    <div *ngIf="dob && dob?.errors?.['required'] && dob?.touched">Required Field</div>
+    <div *ngIf="dob && dob?.errors?.['pattern'] && dob?.touched">Should be in mm-dd-yyyy pattern</div>
+    <br>
+    <br/>
+
+    <button> Submit </button>
+    <br>
+G
+
+    </form>
+    </div>
+    <br>
+

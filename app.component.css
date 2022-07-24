@@ -1,0 +1,14 @@
+input[type=text] {
+  border: 2.0px solid blue;
+  border-radius: 4px;
+  background-color: #bc3c9c;
+  color: white;
+}
+
+input[type=email] {
+  border: 2.0px solid blue;
+  border-radius: 4px;
+  background-color: #bc3c9c;
+  color: white;
+}
+
